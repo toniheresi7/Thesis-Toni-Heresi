@@ -1,0 +1,45 @@
+[retrained] Running ablation analysis (this may take a few minutes)...
+
+============================================================
+EVALUATION SUMMARY (RETRAINED MODEL)
+============================================================
+
+T+1 Mean Return:
+  Platform:       0.0009
+  Momentum:       0.0019
+  Attention-only: 0.0004
+
+T+5 Mean Return:
+  Platform:       0.0039
+  Momentum:       0.0074
+  Attention-only: 0.0027
+
+Mean daily Top-K turnover: 151.68%
+
+Information Coefficient (Spearman, T+1):
+  Mean IC:          +0.0019
+  IC Std:           0.1542
+  IR (IC/Std):      +0.0122
+  Days IC > 0:      51.4%  (181/352 days)
+
+Hit Rate (shortlist stocks with positive return):
+  T+1: 51.9%  (n=3509)
+  T+5: 53.3%  (n=3469)
+
+Model: LightGBM (retrained on this experiment's features)
+  Params: {'n_estimators': 100, 'learning_rate': 0.05, 'max_depth': 3, 'num_leaves': 15, 'min_child_samples': 20}
+  Train: 651 days (2020-01-02 to 2022-08-02)
+  Eval:  352 days (2022-08-03 to 2023-12-26)
+
+Ablation results (delta vs full model at T+1):
+  Remove mom_5d                   : delta=-0.0006
+  Remove mom_1d                   : delta=-0.0004
+  Remove tone_delta               : delta=-0.0002
+  Remove breadth                  : delta=-0.0002
+  Remove herfindahl               : delta=-0.0002
+  Remove tone_finbert             : delta=-0.0002
+  Remove upvote_weighted_tone     : delta=-0.0002
+  Remove attn_shock               : delta=-0.0002
+  Remove rel_share                : delta=-0.0001
+  Remove mom_20d                  : delta=+0.0001
+  Remove agreement                : delta=+0.0003
