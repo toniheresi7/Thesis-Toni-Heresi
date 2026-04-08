@@ -170,7 +170,7 @@ csv_loader → text_utils → features → model → evaluate_retrained
 ## Notes
 
 - The dataset (`data/reddit_sp500.csv`) is not included due to size (2.3 GB).
-  Download from: [emilpartow/reddit-finance-posts-sp500](https://huggingface.co/datasets/emilpartow/reddit-finance-posts-sp500)
+  Download from: [emilpartow/reddit-finance-posts-sp500](https://huggingface.co/datasets/emilpartow/reddit_finance_posts_sp500)
 - Experiments 2 and 3 require a GPU for practical runtime. Job scripts for an HPC
   cluster (Slurm) are in `jobs/`.
 - Pre-trained model artifacts (`model.pkl`, `scaler.pkl`) are included so Steps 2–5
